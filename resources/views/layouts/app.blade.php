@@ -18,7 +18,16 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <div class="navbar-deco" style="height: 40px; background-color: #fbf034;"></div>
+        <div class="container">
+            <a class="d-flex flex-wrap align-items-center" href="{{ url('/') }}">
+                <img src="{{ asset('images/unsri.png') }}" class="my-2" style="max-height: 60px;">
+                <h2 class="ms-3">
+                    {{ __('Digital Repository') }}
+                </h2>
+            </a>
+        </div>
+        <nav class="navbar navbar-expand-md navbar-dark bg-light-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}

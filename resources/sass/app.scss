@@ -6,3 +6,35 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+h1, h2, h3, h4, h5, h6, p
+{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+
+    &:hover
+    {
+        color: inherit;
+    }
+}
+
+.bg-light-dark
+{
+    background-color: #444444;
+
+    & *
+    {
+        color: white;
+    }
+}
+
+@include media-breakpoint-down(md)
+{
+    // We use middle breakpoint bois
+}
