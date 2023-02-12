@@ -1,11 +1,18 @@
 // Fonts
 @import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
 
 h1, h2, h3, h4, h5, h6, p
 {
@@ -34,7 +41,34 @@ a
     }
 }
 
+.navbar-deco
+{
+    height: 40px; 
+    background-color: #fbf034;
+}
+
+.logo
+{
+    max-height: 60px;
+}
+
+.logo-text
+{
+    font-weight: 500;
+    color: #787878;
+}
+
+.custom-navbar
+{
+    font-size: 13px;
+}
+
 @include media-breakpoint-down(md)
 {
     // We use middle breakpoint bois
+
+    .logo-container
+    {
+        justify-content: center !important;
+    }
 }
