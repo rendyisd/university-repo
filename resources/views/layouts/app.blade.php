@@ -71,7 +71,7 @@
                             @if (Route::has('login') && Route::has('register'))
                             <li class="nav-item dropdown my-auto">
                                 <a href="#" id="loginRegisterDropdown" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ _('Guest') }}
+                                    {{ __('Guest') }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="loginRegisterDropdown">
