@@ -48,27 +48,44 @@
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/home') }}" class="nav-link">
+                                <a href="{{ url('/') }}" class="nav-link">
                                     {{ __('Homepage') }}
                                 </a>
                             </li>
                             <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/home') }}" class="nav-link">
+                                <a href="{{ url('/') }}" class="nav-link">
                                     {{ __('About Us') }}
                                 </a>
                             </li>
                             <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/home') }}" class="nav-link">
+                                <a href="{{ url('/') }}" class="nav-link">
                                     {{ __('Collection') }}
                                 </a>
                             </li>
                             <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/home') }}" class="nav-link">
+                                <a href="{{ url('/') }}" class="nav-link">
                                     {{ __('Menu') }}
                                 </a>
                             </li>
-                            <!-- Authentication Links -->
                             @guest
+                            @if (Route::has('login') && Route::has('register'))
+                            <li class="nav-item dropdown my-auto">
+                                <a href="#" id="loginRegisterDropdown" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ _('Guest') }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="loginRegisterDropdown">
+                                @if(Route::has('login'))
+                                    <a class="dropdown-item text-dark" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                @endif
+                                @if(Route::has('register'))
+                                    <a class="dropdown-item text-dark" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                @endif
+
+                                </div>
+                            </li>
+                            <!-- Authentication Links -->
+                            {{-- @guest
                                 @if (Route::has('login'))
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -79,7 +96,8 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
-                                @endif
+                                @endif --}}
+                            @endif
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -87,7 +105,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                        <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
