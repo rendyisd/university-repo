@@ -54,3 +54,5 @@ You can now access the server at http://localhost:8000
     php artisan migrate
     php artisan serve
     npm run dev
+
+    **Farhan** 
