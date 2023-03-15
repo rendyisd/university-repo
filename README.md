@@ -55,4 +55,4 @@ You can now access the server at http://localhost:8000
     php artisan serve
     npm run dev
 
-    **Farhan** 
+    **Farhan Rendy** 
