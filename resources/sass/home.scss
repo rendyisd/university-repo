@@ -1,0 +1,101 @@
+
+body 
+{
+    font-size: 15px;
+    line-height: 1.7;
+    font-family: "Open sans","Helvetica","Arial";
+    color: #555;
+    overflow-wrap: break-word;
+}
+div 
+{
+    display: block;
+    justify-content: space-between;
+    
+}
+*
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+h1, h2, h3, h4, h5, h6, p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.search_box {
+    width: 50%;
+}
+
+.toggle_box 
+{
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: 0;
+    margin-left: 0;
+}
+i.fa 
+{
+    padding-right: 6px;
+}
+
+.toggle
+{
+    font-size: 15px;
+    padding: 5px 0 0 10px;
+    cursor: pointer;
+    height: 25px;
+    background: #fff;
+    font-weight: bold;
+    color: #595959;
+}
+.border-dotted {
+    border-bottom: 1px dotted #ccc;
+}
+.toggle-container 
+{
+    line-height: 22px;
+    font-size: 14px;
+    color: #4d4d4d;
+    border: 0 dotted #ccc;
+    border-top: 0;
+    margin: 0;
+    padding: 0;
+}
+element.style 
+{
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+select
+{
+    background: #fff;
+    vertical-align: middle;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    line-height: 35px;
+    border: solid 1px #bcbbbb;
+    outline: 0;
+    overflow: hidden;
+}
+
+.form-select-
+{
+   width: 50%;
+}
+
+.form-control
+{
+    width: 40%;
+    width: auto;
+    margin-top: 0px;
+    border: 1px solid #ffd200;
+    color: #444;
+    padding: 6px;
+    font-size: 14px;
+  
+}
