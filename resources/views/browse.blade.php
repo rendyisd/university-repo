@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-METADATA PAGE
+BROWSE PAGE
 @endsection

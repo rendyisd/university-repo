@@ -15,6 +15,7 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @yield('scripts')
 </head>
 <body>
     <div id="app">
@@ -22,7 +23,7 @@
             <div class="navbar-deco""></div>
             <div class="navbar">
                 <div class="container logo-container">
-                    <a class="navbar-brand d-flex flex-wrap align-items-center" href="{{ url('/home') }}">
+                    <a class="navbar-brand d-flex flex-wrap align-items-center" href="{{ url('/') }}">
                         <img src="{{ asset('images/unsri.png') }}" class="logo">
                         <h3 class="logo-text ms-3">
                             {{ __('Digital Repository') }}

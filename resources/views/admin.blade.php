@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-METADATA PAGE
+ADMIN PAGE
 @endsection

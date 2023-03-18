@@ -18,4 +18,9 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+// These are temporary
+Route::get('/metadata', [App\Http\Controllers\MetadataController::class, 'index'])->name('metadata');
+Route::get('/browse', [App\Http\Controllers\BrowseController::class, 'index'])->name('browse');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])->name('deposit');
 
