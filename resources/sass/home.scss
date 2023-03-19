@@ -6,6 +6,15 @@ body
     font-family: "Open sans","Helvetica","Arial";
     color: #555;
     overflow-wrap: break-word;
+    
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+p 
+{
+    text-align: justify;
 }
 div 
 {
@@ -25,7 +34,7 @@ h1, h2, h3, h4, h5, h6, p
 }
 
 .search_box {
-    width: 50%;
+    width: 70%;
 }
 
 .toggle_box 
@@ -99,3 +108,22 @@ select
     font-size: 14px;
   
 }
+// icon
+.large-icon {
+    font-size: 50px;
+}
+
+// table
+
+th 
+{
+    text-align: left;
+    font-weight: bold;
+}
+table 
+ {
+    border: 1px solid #ddd;
+ }
+ table,td,th {
+    border: 1px solid #ddd;
+ }

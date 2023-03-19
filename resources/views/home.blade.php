@@ -36,6 +36,7 @@
                         <div class="border-dotted mt-2"></div>
                     </div>
                 </div>
+
                 <div class="toggle_container mt-2">
                     <form class="wpcf7-form" role="form" name="form1" id="form" action="">
                         <div class="section-content">
@@ -54,6 +55,61 @@
                         </div>
                 </div>
                 </form>
+                <table class="mt-2 table table-striped">
+                    <tbody>
+                        <tr>
+                            <th id="t1" class="oddRowEvenCol">Bibliography</th>
+                            <th id="t2" class="oddRowOddCol" width="10%">Contents</th>
+                        </tr>
+                        <tr>
+                            <td headers="t1" class="oddRowOddCol">
+                                <strong>
+                                    <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/279517">
+                                        Identification of a tomato UDP-arabinosyltransferase for airborne volatile
+                                        reception</a>
+                                </strong>
+                                <br>
+                                <p>
+                                    Sugimoto, Koichi; Ono, Eiichiro; Inaba, Tamaki; Tsukahara, Takehiko; Matsui, Kenji;
+                                    Horikawa, Manabu; Toyonaga, Hiromi; Fujikawa, Kohki; Osawa, Tsukiho; Homma, Shunichi;
+                                    Kiriiwa, Yoshikazu; Ohmura, Ippei; Miyagawa, Atsushi; Yamamura, Hatsuo; Fujii, Mikio;
+                                    Ozawa,
+                                    Rika; Watanabe, Bunta; Miura, Kenji; Ezura, Hiroshi; Ohnishi, Toshiyuki; Takabayashi,
+                                    Junji
+                                    (2023-02-08)
+                                    Nature Communications, 14
+                                </p>
+                                <br>
+                                &nbsp;&nbsp;Nature Communications, 14
+                                <br>
+                            </td>
+                            <td headers="t2" class="oddRowEvenCol" align="center">
+                                <a href="/dspace/bitstream/2433/279517/1/s41467-023-36381-8.pdf">
+                                    <i class="fa-regular fa-file-pdf large-icon"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td headers="t1" class="oddEvenCol">
+                                <strong>
+                                    <a href="https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/275860">
+                                        The crucial influence of trophic status on the relative requirement of nitrogen to
+                                        phosphorus for phytoplankton growth</a>
+                                </strong>
+                                <br>
+                                <p>
+                                    &nbsp;&nbsp;Jiang, Mengqi; Nakano, Shin-ichi (2022-08-15)
+                                </p>
+                                <br>
+                                &nbsp;&nbsp;Water Research, 222
+                                <br>
+                            </td>
+                            <td headers="t2" class="oddRowEvenCol" align="center">
+                                <a href="/dspace/bitstream/2433/279517/1/s41467-023-36381-8.pdf">
+                                    <i class="fa-regular fa-file-pdf large-icon"></i></a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
         </div>
