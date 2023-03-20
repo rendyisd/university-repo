@@ -11,7 +11,7 @@
             {{-- Kolom kiri --}}
             <div class="title-search pb-2 mb-4">
                 <i class="fa-solid fa-book me-2"></i>
-                <span class="fw-bold">Pencarian</span>
+                <span class="fw-bold">Searching</span>
             </div>
 
             <table class="table table-striped table-bordered">
