@@ -7,11 +7,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Sriwijaya University Digital Repository</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -19,9 +21,10 @@
 </head>
 <body>
     <div id="app">
+
+        <div class="navbar-deco""></div>
         <div class="sticky-top">
-            <div class="navbar-deco""></div>
-            <div class="navbar">
+            <div class="navbar bg-light">
                 <div class="container logo-container">
                     <a class="navbar-brand d-flex flex-wrap align-items-center" href="{{ url('/') }}">
                         <img src="{{ asset('images/unsri.png') }}" class="logo">
@@ -33,7 +36,7 @@
             </div>
             <nav class="navbar navbar-expand-md navbar-dark bg-light-dark shadow-sm custom-navbar">
                 <div class="container">
-                    <p>
+                    <p class="my-auto">
                         {{ __('Research Information Repository') }}
                     </p>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -110,6 +113,7 @@
                 </div>
             </nav>
         </div>
+
 
         <main class="py-4">
             @yield('content')
