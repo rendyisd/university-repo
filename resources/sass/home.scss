@@ -1,0 +1,61 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+a{
+    text-decoration: none;
+}
+
+.title-search{
+    border-bottom: 1px solid $gray-500;
+}
+
+.col-bibliography{
+    @extend .d-grid;
+    @extend .gap-1;
+    a:hover{
+        text-decoration: underline;
+    }
+
+    .col-bibliography-sub{
+        @extend .mb-0;
+        @extend .ms-2;
+        font-size: 13px;
+        color: $gray-600;
+    }
+}
+
+.list-group li a{
+    font-size: 12px;
+}
+
+.list-group li a:hover{
+    text-decoration: underline;
+}
+
+.panel-submission{
+    .card-header{
+        color: #3E54AC;
+        background-color: #C9EEFF;
+        font-size: 14px;
+    }
+
+    .list-group li:nth-child(odd){
+        background-color: $gray-100;
+    }
+}
+
+.panel-shortcut-author{
+    .card-header{
+        color: #{shade-color(#BEF0CB, 60%)};
+        background-color: #BEF0CB;
+    }
+}
+
+.list-group-item .badge{
+    @extend .rounded-pill;
+    @extend .float-end;
+    background-color: #{shade-color($gray-100, 40%)};
+}
