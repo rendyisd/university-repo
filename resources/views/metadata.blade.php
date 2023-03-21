@@ -116,14 +116,16 @@
                 {{-- side other recomendation --}}
             </div>
             <div class="col-lg-4">
-                <div class="rightMeta_container">
-                    <div class="headerside mt-3">
+                <div class="card rightside-container">
+                    {{-- header --}}
+                    <div class="card-header">
                         <i class="fa fa-link"></i>
                         <span style="font-size:19px;color:#222">
                             &nbsp;Other
                         </span>
-                        {{-- icon --}}
-                        <div class="icon mt-2" style="border-bottom: 1px dotted #cccccc;"></div>
+                    </div>
+                    {{-- content other --}}
+                    <div class="content-other" style="padding: 8px">
 
                         <div class="author mt-3">
                             <h7 class="name fw-">Arsy Karima Zahra, author</h7>
@@ -135,15 +137,14 @@
                                     Selection for Rail-Transport</div>
                             </a>
                         </div>
-
                         <div>
                             Fakultas Teknik Universitas Sriwijaya, 2022</div>
-                    </div>
-                    <div>
-                        <i class="fa fa-database"></i>
-                        &nbsp;Unsri - Tesis (Membership)
-                        <div class="border mt-3" style="border-bottom: 1px solid black"></div>
-                    </div>
+                        <div>
+                            <i class="fa fa-database"></i>
+                            &nbsp;Unsri - Tesis (Membership)
+                            <div class="border mt-3" style="border-bottom: 1px solid black"></div>
+                        </div>
+
                         <div class="author mt-3">
                             <h7 class="name fw-">Farhan Nugraha, author</h7>
                         </div>
@@ -154,18 +155,16 @@
                                     Selection for Rail-Transport</div>
                             </a>
                         </div>
-
                         <div>
                             Fakultas Ilmu Komputer Universitas Sriwijaya, 2023</div>
+                        <div>
+                            <i class="fa fa-database"></i>
+                            &nbsp;Unsri - Tesis (Membership)
+                            <div class="border mt-3" style="border-bottom: 1px solid black"></div>
+                        </div>
+                        {{-- end other --}}
                     </div>
-                    <div>
-                        <i class="fa fa-database"></i>
-                        &nbsp;Unsri - Tesis (Membership)
-                        <div class="border mt-3" style="border-bottom: 1px solid black"></div>
-                    </div>
-                   
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+    @endsection
