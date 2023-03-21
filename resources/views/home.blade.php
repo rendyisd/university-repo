@@ -16,7 +16,7 @@
             <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit</a>
             <br>
             {{-- Kolom kiri --}}
-            <div class="title-search pb-2 mb-4">
+            <div class="title-search pb-2 mb-4 mt-3">
                 <i class="fa-solid fa-book me-2"></i>
                 <span class="fw-bold">Searching</span>
             </div>
