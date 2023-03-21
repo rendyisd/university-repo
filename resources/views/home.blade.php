@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('scripts')
+
+
 @vite(['resources/sass/home.scss'])
 @endsection
 
@@ -8,10 +10,15 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
+            <a href="{{ route('metadata') }}" class="btn btn-primary">Metadata</a>
+            <a href="{{ route('browse') }}" class="btn btn-primary">Browse</a>
+            <a href="{{ route('admin') }}" class="btn btn-primary">Admin</a>
+            <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit</a>
+            <br>
             {{-- Kolom kiri --}}
             <div class="title-search pb-2 mb-4">
                 <i class="fa-solid fa-book me-2"></i>
-                <span class="fw-bold">Pencarian</span>
+                <span class="fw-bold">Searching</span>
             </div>
 
             <table class="table table-striped table-bordered">
