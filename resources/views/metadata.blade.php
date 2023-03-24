@@ -28,7 +28,7 @@
                             <tr>
                                 <td>
                                     <div class="uri" id="url">URI:
-                                        https://lib.unsri.ac.id/detail?id=20490420&amp;lokasi=lokal</div>
+                                        https://lib.unsri.ac.id/detail?id=20490420&amp;location=local</div>
                                 </td>
                             </tr>
                         </tbody>
@@ -46,64 +46,64 @@
                         <table class="table-striped2">
                             <tbody>
                                 <tr>
-                                    <td class="detailField">Jenis Koleksi : </td>
-                                    <td class="detailContent">Unsri - Skripsi (open)</td>
+                                    <td class="detailField">Collection Type : </td>
+                                    <td class="detailContent">Unsri - Thesis (open)</td>
                                 </tr>
 
                                 <tr>
-                                    <td class="detailField">No. Panggil : </td>
+                                    <td class="detailField">Call Number : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Entri utama-Nama orang : </td>
+                                    <td class="detailField">Main entry-Name of person : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Subjek : </td>
+                                    <td class="detailField">Subject : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Penerbitan : </td>
+                                    <td class="detailField">Publishing : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Program Studi : </td>
+                                    <td class="detailField">Study Program : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Kode Bahasa : </td>
+                                    <td class="detailField">Language Code : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Sumber Pengatalogan : </td>
+                                    <td class="detailField">Cataloging Sources : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Tipe Konten : </td>
+                                    <td class="detailField">Content Type : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Tipe Media : </td>
+                                    <td class="detailField">Media Type : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Tipe Carrier : </td>
+                                    <td class="detailField">Carrier Type : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Deskripsi Fisik : </td>
+                                    <td class="detailField">Physical Description : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Catatan Bibliographi : </td>
+                                    <td class="detailField">Bibliographical Notes : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Lembaga Pemilik : </td>
+                                    <td class="detailField">Owner's Agency : </td>
                                     <td class="detailContent"></td>
                                 </tr>
                                 <tr>
-                                    <td class="detailField">Lokasi : </td>
+                                    <td class="detailField">Location : </td>
                                     <td class="detailContent"></td>
                                 </tr>
 
@@ -141,7 +141,7 @@
                             Fakultas Teknik Universitas Sriwijaya, 2022</div>
                         <div>
                             <i class="fa fa-database"></i>
-                            &nbsp;Unsri - Tesis (Membership)
+                            &nbsp;Unsri - Thesis (Membership)
                             <div class="border mt-3" style="border-bottom: 1px solid black"></div>
                         </div>
 
@@ -159,7 +159,7 @@
                             Fakultas Ilmu Komputer Universitas Sriwijaya, 2023</div>
                         <div>
                             <i class="fa fa-database"></i>
-                            &nbsp;Unsri - Tesis (Membership)
+                            &nbsp;Unsri - Thesis (Membership)
                             <div class="border mt-3" style="border-bottom: 1px solid black"></div>
                         </div>
                         {{-- end other --}}
