@@ -61,16 +61,7 @@
                                     {{ __('About Us') }}
                                 </a>
                             </li>
-                            <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/') }}" class="nav-link">
-                                    {{ __('Collection') }}
-                                </a>
-                            </li>
-                            <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/') }}" class="nav-link">
-                                    {{ __('Menu') }}
-                                </a>
-                            </li>
+                            
                             @guest
                             @if (Route::has('login') && Route::has('register'))
                             <li class="nav-item dropdown my-auto">
