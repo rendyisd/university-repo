@@ -1,0 +1,46 @@
+@import 'home';
+
+.btn-success{
+    --bs-btn-bg: #{shade-color(limegreen, 10%)};
+    --bs-btn-border-color: #{shade-color(limegreen, 10%)};
+    --bs-btn-hover-bg: #{shade-color(limegreen, 30%)};
+    --bs-btn-hover-border-color: #{shade-color(limegreen, 20%)};
+}
+
+.deposit-table,
+.deposit-table th,
+.deposit-table td{
+    border: 2px solid #ccc;
+}
+
+.deposit-table-head{
+    background-color: #33396C;
+    color: white;
+}
+
+.deposit-form-table-cell{
+    width: 70%;
+}
+
+.deposit-form-label{
+    @extend .fw-bold;
+    width: 100%;
+}
+
+.deposit-form-table-cell{
+    #depositAuthorContributor,
+    #depositKeywords{
+        resize: none;
+    }
+}
+
+@include media-breakpoint-down(md){
+    .deposit-label-table-cell{
+        font-size: 13px;
+    }
+
+    select,
+    option{
+        font-size: 12px;
+    }
+}
