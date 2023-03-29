@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('scripts')
-<<<<<<< HEAD
+g
     @vite(['resources/sass/home.scss'])
 @endsection
 
