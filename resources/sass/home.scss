@@ -8,7 +8,7 @@ a{
     text-decoration: none;
 }
 
-.title-search{
+.title-text{
     border-bottom: 1px solid $gray-500;
 }
 
@@ -58,4 +58,23 @@ a{
     @extend .rounded-pill;
     @extend .float-end;
     background-color: #{shade-color($gray-100, 40%)};
+}
+
+.search-box-container{
+    position: relative;
+}
+
+.search-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    pointer-events: none;
+}
+
+.panel-browse{
+    .card-header{
+        background-color: #3E54AC;
+        color: white;
+    }
 }
