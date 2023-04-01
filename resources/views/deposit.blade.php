@@ -21,6 +21,7 @@
     <div class="row">
         <div class="col">
             <form action="" method="post">
+                @csrf
                 <table class="table table-bordered deposit-table">
                     <thead>
                         <tr  class="deposit-table-head">
@@ -99,7 +100,7 @@
                                     <option value="">Faculty of Public Health</option>
                                 </select>
                                 <div id="facultyHelp" class="form-text">
-                                    The faculty of the author that produced this thesis or dissertation.
+                                    The faculty that produced this thesis or dissertation.
                                 </div>
                             </td>
                         </tr>
@@ -137,22 +138,6 @@
                                 </select>
                                 <div id="typeHelp" class="form-text">
                                     The category or type of this thesis or dissertation.
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label for="depositKeywords" class="deposit-form-label">
-                                    Keywords
-                                    <br>
-                                    <span class="badge text-bg-secondary">Optional</span>
-                                </label>
-                            </td>
-                            <td class="deposit-form-table-cell">
-                                <textarea class="form-control" id="depositKeywords" aria-describedby="keywordsHelp" rows="4"></textarea>
-                                <div id="keywordsHelp" class="form-text">
-                                    Please list each keywords on a separate line in the input field provided.
                                 </div>
                             </td>
                         </tr>

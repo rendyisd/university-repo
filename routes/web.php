@@ -21,7 +21,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // These are temporary
 Route::get('/metadata', [App\Http\Controllers\MetadataController::class, 'index'])->name('metadata');
 Route::get('/browse', [App\Http\Controllers\BrowseController::class, 'index'])->name('browse');
-Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, 'index'])->name('approvement');
+Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, 'index'])
+    ->middleware('role:Admin')
+    ->name('approvement');
 Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])->name('deposit');
 Route::get('/pending', [App\Http\Controllers\PendingController::class, 'index'])->name('pending');
 

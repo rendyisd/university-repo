@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('documents', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('role', ['User', 'Admin'])->default('User');
-            $table->rememberToken();
+            $table->string('title', 255);
+            $table->string('faculty', 255);
+            $table->text('abstract');
+            $table->string('item_type', 255);
+            $table->string('filename', 255);
+            $table->enum('status', ['Pending', 'Accepted'])->default('Pending');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('documents');
     }
 };
