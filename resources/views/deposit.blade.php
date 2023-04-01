@@ -157,6 +157,22 @@
                             </td>
                         </tr>
 
+                        <tr>
+                            <td>
+                                <label for="depositDocument" class="deposit-form-label">
+                                    Document
+                                    <br>
+                                    <span class="badge text-bg-danger">Required</span>
+                                </label>
+                            </td>
+                            <td class="deposit-form-table-cell">
+                                <input class="form-control" type="file" id="depositDocument" aria-describedby="documentHelp" accept="application/pdf">
+                                <div id="documentHelp" class="form-text">
+                                    Only accepts document of <span class="fw-bold">.pdf</span> file format
+                                </div>
+                            </td>
+                        </tr>
+
                     </tbody>
                 </table>
 
