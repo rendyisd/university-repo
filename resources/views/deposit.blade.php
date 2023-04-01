@@ -20,7 +20,7 @@
 
     <div class="row">
         <div class="col">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 @csrf
                 <table class="table table-bordered deposit-table">
                     <thead>

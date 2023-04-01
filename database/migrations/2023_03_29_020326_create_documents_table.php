@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title', 255);
             $table->string('faculty', 255);
             $table->text('abstract');
-            $table->string('item_type', 255);
+            $table->enum('item_type', ['ug', 'ms', 'phd']);
             $table->string('filename', 255);
             $table->enum('status', ['Pending', 'Accepted'])->default('Pending');
             $table->timestamps();
