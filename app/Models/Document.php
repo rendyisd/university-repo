@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Document extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'title',
+        'faculty',
+        'abstract',
+        'item_type',
+    ];
+
+    public function resolveItemType()
+    {
+        $itemType = [
+            'ug' => 'Undergraduate Thesis',
+            'ms' => 'Master Thesis',
+            'phd' => 'Doctoral Thesis',
+        ];
+
+        return $itemType[$this['item_type']] ?? 'Unknown';
+    }
+}
