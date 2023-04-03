@@ -20,7 +20,7 @@
 
     <div class="row">
         <div class="col">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{ route('depositSubmit') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <table class="table table-bordered deposit-table">
                     <thead>
@@ -38,7 +38,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <input type="text" class="form-control" id="depositTitle" aria-describedby="titleHelp">
+                                <input type="text" class="form-control" id="depositTitle" aria-describedby="titleHelp" autocomplete="off" name="title" required>
                                 <div id="titleHelp" class="form-text">
                                     The title of this thesis or dissertation.
                                 </div>
@@ -54,7 +54,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <input type="text" class="form-control" id="depositAuthorMain" aria-describedby="authorMHelp">
+                                <input type="text" class="form-control" id="depositAuthorMain" aria-describedby="authorMHelp" autocomplete="off" name="mainAuthor" required>
                                 <div id="authorMHelp" class="form-text">
                                     The main author of this thesis or dissertation.
                                 </div>
@@ -70,7 +70,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <textarea class="form-control" id="depositAuthorContributor" aria-describedby="authorCHelp" rows="4"></textarea>
+                                <textarea class="form-control" id="depositAuthorContributor" aria-describedby="authorCHelp" rows="4" name="contAuthor"></textarea>
                                 <div id="authorCHelp" class="form-text">
                                     Please list each contributor author's name on a separate line in the input field provided.
                                 </div>
@@ -86,9 +86,9 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <select class="form-select" id="depositFaculty" aria-describedby="facultyHelp">
+                                <select class="form-select" id="depositFaculty" aria-describedby="facultyHelp" required name="faculty">
                                     <option selected disabled>Select Faculty</option>
-                                    <option value="">Faculty of Economics</option>
+                                    <option value="fe">Faculty of Economics</option>
                                     <option value="">Faculty of Law</option>
                                     <option value="">Faculty of Engineering</option>
                                     <option value="">Faculty of Medicine</option>
@@ -114,7 +114,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <textarea class="form-control" id="depositAbstract" aria-describedby="abstractHelp" rows="4"></textarea>
+                                <textarea class="form-control" id="depositAbstract" aria-describedby="abstractHelp" rows="4" name="abstract" required></textarea>
                                 <div id="abstractHelp" class="form-text">
                                     A brief summary of the main points and conclusions of this thesis or dissertation, typically no more than 300-500 words in length.
                                 </div>
@@ -130,7 +130,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <select class="form-select" id="depositType" aria-describedby="typeHelp">
+                                <select class="form-select" id="depositType" aria-describedby="typeHelp" required name="itemType">
                                     <option selected disabled>Select Item Type</option>
                                     <option value="ug">Undergraduate Thesis</option>
                                     <option value="ms">Master Thesis</option>
@@ -151,7 +151,7 @@
                                 </label>
                             </td>
                             <td class="deposit-form-table-cell">
-                                <input class="form-control" type="file" id="depositDocument" aria-describedby="documentHelp" accept="application/pdf">
+                                <input class="form-control" type="file" id="depositDocument" aria-describedby="documentHelp" accept="application/pdf" name="document" required>
                                 <div id="documentHelp" class="form-text">
                                     Only accepts document of <span class="fw-bold">.pdf</span> file format
                                 </div>

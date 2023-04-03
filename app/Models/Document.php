@@ -14,14 +14,21 @@ class Document extends Model
         'faculty',
         'abstract',
         'item_type',
+        'filename',
+        'status',
     ];
+
+    public function author()
+    {
+        return $this->belongsToMany(Author::class);
+    }
 
     public function resolveItemType()
     {
         $itemType = [
             'ug' => 'Undergraduate Thesis',
             'ms' => 'Master Thesis',
-            'phd' => 'Doctoral Thesis',
+            'phd' => 'Doctoral Dissertation',
         ];
 
         return $itemType[$this['item_type']] ?? 'Unknown';
