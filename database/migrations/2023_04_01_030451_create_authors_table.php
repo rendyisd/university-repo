@@ -13,10 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('author_document', function (Blueprint $table) {
-            $table->foreignId('author_id')->constrained('authors');
-            $table->foreignId('document_id')->constrained('documents');
-            $table->enum('status', ['Main', 'Contributor']);
+        Schema::create('authors', function (Blueprint $table) {
+            $table->id();
+            $table->string('name', 255);
+            $table->timestamps();
         });
     }
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('author_document');
+        Schema::dropIfExists('authors');
     }
 };
