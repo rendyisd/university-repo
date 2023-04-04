@@ -12,7 +12,7 @@
         <div class="col">
             <div class="title-text pb-2 mb-4">
                 <i class="fa-solid fa-book me-2"></i>
-                <span class="fw-bold">Pending Page</span>
+                <span class="fw-bold">Your Document</span>
             </div>
         </div>
     </div>

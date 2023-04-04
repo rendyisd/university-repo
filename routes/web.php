@@ -34,7 +34,7 @@ Route::post('/deposit/submit', [App\Http\Controllers\DepositController::class, '
     ->middleware('auth')
     ->name('depositSubmit');
 
-Route::get('/pending', [App\Http\Controllers\PendingController::class, 'index'])
+Route::get('/your-document', [App\Http\Controllers\YourDocumentController::class, 'index'])
     ->middleware('auth')
-    ->name('pending');
+    ->name('your_document');
 
