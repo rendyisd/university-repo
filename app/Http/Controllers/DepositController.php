@@ -76,6 +76,6 @@ class DepositController extends Controller
             $newDoc->author()->attach($contAuthor->id, ['status' => 'Contributor']);
         }
 
-        return redirect()->route('pending');
+        return redirect()->route('your_document');
     }
 }

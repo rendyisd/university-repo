@@ -15,7 +15,7 @@
             <a href="{{ route('browse') }}" class="btn btn-primary">Browse</a>
             <a href="{{ route('approvement') }}" class="btn btn-primary">Approvement</a>
             <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit</a>
-            <a href="{{ route('pending') }}" class="btn btn-primary">Pending</a>
+            <a href="{{ route('your_document') }}" class="btn btn-primary">Your Document</a>
             <br>
             {{-- Kolom kiri --}}
             <div class="row mb-3">

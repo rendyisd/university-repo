@@ -7,12 +7,12 @@ use App\Models\Author;
 use app\Models\Document;
 use Illuminate\Support\Facades\Auth;
 
-class PendingController extends Controller
+class YourDocumentController extends Controller
 {
     public function index(){
         $user = Auth::user();
         $userDocuments = $user->document;
 
-        return view('pending', ['documents' => $userDocuments]);
+        return view('your_document', ['documents' => $userDocuments]);
     }
 }
