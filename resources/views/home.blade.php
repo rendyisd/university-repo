@@ -62,9 +62,6 @@
                                         <div class="col px-1">
                                             <a href="" class="btn btn-secondary w-100">Document Type</a>
                                         </div>
-                                        <div class="col px-1">
-                                            <a href="" class="btn btn-secondary w-100">Keyword</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
