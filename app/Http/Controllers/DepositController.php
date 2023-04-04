@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Author;
 use App\Models\Document;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DepositController extends Controller
 {
@@ -48,6 +49,7 @@ class DepositController extends Controller
 
         $newDoc = new Document();
 
+        $newDoc->user_id = Auth::id();
         $newDoc->title = $validatedData['title'];
         $newDoc->faculty = $validatedData['faculty'];
         $newDoc->abstract = $validatedData['abstract'];
@@ -73,10 +75,6 @@ class DepositController extends Controller
             ]);
             $newDoc->author()->attach($contAuthor->id, ['status' => 'Contributor']);
         }
-
-        return response()->json([
-            'success' => true
-        ]);
 
         return view('pending');
     }
