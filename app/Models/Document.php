@@ -10,6 +10,7 @@ class Document extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'title',
         'faculty',
         'abstract',
@@ -21,6 +22,24 @@ class Document extends Model
     public function author()
     {
         return $this->belongsToMany(Author::class);
+    }
+
+    public function resolveFaculty()
+    {
+        $faculty = [
+            'feco' => 'Faculty of Economics',
+            'flaw' => 'Faculty of Law',
+            'feng' => 'Faculty of Engineering',
+            'fmed' => 'Faculty of Medicine',
+            'fagr' => 'Faculty of Agriculture',
+            'fedu' => 'Faculty of Education and Educational Science',
+            'fsoc' => 'Faculty of Social and Politic Science',
+            'fmat' => 'Faculty of Mathematics and Natural Science',
+            'focs' => 'Faculty of Computer Science',
+            'foph' => 'Faculty of Public Health',
+        ];
+
+        return $faculty[$this['faculty']] ?? 'Unknown';
     }
 
     public function resolveItemType()

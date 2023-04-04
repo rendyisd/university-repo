@@ -88,16 +88,16 @@
                             <td class="deposit-form-table-cell">
                                 <select class="form-select" id="depositFaculty" aria-describedby="facultyHelp" required name="faculty">
                                     <option selected disabled>Select Faculty</option>
-                                    <option value="fe">Faculty of Economics</option>
-                                    <option value="">Faculty of Law</option>
-                                    <option value="">Faculty of Engineering</option>
-                                    <option value="">Faculty of Medicine</option>
-                                    <option value="">Faculty of Agriculture</option>
-                                    <option value="">Faculty of Education and Educational Science</option>
-                                    <option value="">Faculty of Social and Politic Science</option>
-                                    <option value="">Faculty of Mathematics and Natural Science</option>
-                                    <option value="">Faculty of Computer Science</option>
-                                    <option value="">Faculty of Public Health</option>
+                                    <option value="feco">Faculty of Economics</option>
+                                    <option value="flaw">Faculty of Law</option>
+                                    <option value="feng">Faculty of Engineering</option>
+                                    <option value="fmed">Faculty of Medicine</option>
+                                    <option value="fagr">Faculty of Agriculture</option>
+                                    <option value="fedu">Faculty of Education and Educational Science</option>
+                                    <option value="fsoc">Faculty of Social and Politic Science</option>
+                                    <option value="fmat">Faculty of Mathematics and Natural Science</option>
+                                    <option value="focs">Faculty of Computer Science</option>
+                                    <option value="foph">Faculty of Public Health</option>
                                 </select>
                                 <div id="facultyHelp" class="form-text">
                                     The faculty that produced this thesis or dissertation.

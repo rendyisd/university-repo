@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
             $table->string('title', 255);
-            $table->string('faculty', 255);
+            $table->enum('faculty', ['feco', 'flaw', 'feng', 'fmed', 'fagr', 'fedu', 'fsoc', 'fmat', 'focs', 'foph']);
             $table->text('abstract');
             $table->enum('item_type', ['ug', 'ms', 'phd']);
+            $table->date('published_date')->nullable()->format('Y-m-d');
             $table->string('filename', 255);
             $table->enum('status', ['Pending', 'Accepted'])->default('Pending');
             $table->timestamps();

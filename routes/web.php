@@ -27,8 +27,12 @@ Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, '
     ->middleware('role:Admin')
     ->name('approvement');
 
-Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])->name('deposit');
-Route::post('/deposit/submit', [App\Http\Controllers\DepositController::class, 'depositSubmit'])->name('depositSubmit');
+Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])
+    ->middleware('auth')
+    ->name('deposit');
+Route::post('/deposit/submit', [App\Http\Controllers\DepositController::class, 'depositSubmit'])
+    ->middleware('auth')
+    ->name('depositSubmit');
 
 Route::get('/pending', [App\Http\Controllers\PendingController::class, 'index'])->name('pending');
 
