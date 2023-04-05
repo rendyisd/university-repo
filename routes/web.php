@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DocumentController;
+use App\Models\Document;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -38,3 +40,6 @@ Route::get('/your-document', [App\Http\Controllers\YourDocumentController::class
     ->middleware('auth')
     ->name('your_document');
 
+Route::get('/docs/pending/{filename}', [App\http\Controllers\DocumentController::class, 'pending'])
+    ->middleware('pending')
+    ->name('pending');

@@ -9,6 +9,8 @@
 
     <title>Sriwijaya University Digital Repository</title>
 
+    <link rel="icon" href="{{ asset('/images/unsri.png') }}">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -87,6 +89,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a href="{{ route('your_document') }}" class="dropdown-item text-dark">Your Document</a>
                                         <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">

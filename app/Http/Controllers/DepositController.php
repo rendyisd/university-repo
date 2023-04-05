@@ -6,6 +6,7 @@ use App\Models\Author;
 use App\Models\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class DepositController extends Controller
 {
@@ -15,8 +16,7 @@ class DepositController extends Controller
     }
 
     public function depositSubmit(Request $request)
-    {
-        
+    {   
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'mainAuthor' => 'required|regex:/^[a-zA-Z\s]*$/', // this regex only allows letters and whitespace
@@ -62,7 +62,7 @@ class DepositController extends Controller
 
         $newDoc->save();
         
-        $validatedData['document']->storeAs('public/documents', $newFileName);
+        $validatedData['document']->storeAs('documents/pending', $newFileName);
 
         $mainAuthor = Author::firstOrCreate([
             'name' => $validatedData['mainAuthor'],

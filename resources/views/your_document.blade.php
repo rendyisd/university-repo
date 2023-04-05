@@ -52,7 +52,7 @@
                             </p>
                         </td>
                         <td class="text-center">
-                            <a href="{{ asset('storage/documents/'.$document->filename) }}">
+                            <a href="{{ route('pending', ['filename' => $document->filename]) }}">
                                 <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
                             </a>
                         </td>
