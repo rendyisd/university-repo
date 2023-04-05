@@ -2,7 +2,7 @@
 
 @section('scripts')
  @vite([
-    'resources/sass/admin.scss',
+    'resources/sass/home.scss',
 ]) 
 @endsection
 
@@ -10,136 +10,67 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="title-search pb-2 mb-4">
+            <div class="title-text pb-2 mb-4">
                 <i class="fa-solid fa-book me-2"></i>
                 <span class="fw-bold">Approvement Page</span>
             </div>
         </div>
     </div>
-    <table class="table table-striped table-bordered">
-        <tbody>
-            <tr>
-                <th scope="col" class="fw-bold">Bibliography</th>
-                <th scope="col" class="fw-bold">Content</th>
-                <th scope="col" class="fw-bold">Approvement</th>
-            </tr>
-            <tr>
-                <td class="col-bibliography">
-                    <a href="#" class="fw-bold">
-                        Colonization process determines species diversity via competitive quasi-exclusion
-                    </a>
-                    <p class="col-bibliography-sub">
-                        Sugimoto, Koichi; Ono, Eiichiro; Inaba, Tamaki; Tsukahara, Takehiko; Matsui, Kenji
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Undergraduate Thesis
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Sriwijaya University, Faculty of Computer Science, Computer System
-                    </p>
-                </td>
-                <td class="text-center">
-                    <a href="#">
-                        <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
-                    </a>
-                </td>
-                <td class="approve text-center">
-                    <form action="" method="POST">
-                        <input type="hidden" name="approve">
-                        <button type="button" class="btn btn-success">Approve</button>
-                        <input type="hidden" name="denied">
-                        <button type="button" class="btn btn-danger">Deny</button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-bibliography">
-                    <a href="#" class="fw-bold">
-                        Fresh-marketable tomato yields enhanced by moderate weed control and suppressed fruit dehiscence with woodchip mulching
-                    </a>
-                    <p class="col-bibliography-sub">
-                        Horimoto, Sakae; Fukuda, Kazuaki; Yoshimura, Jin; Ishida, Atsushi (2022)
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Master Thesis
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Sriwijaya University, Faculty of Agriculture, Agribusiness
-                    </p>
-                </td>
-                <td class="text-center">
-                    <a href="#">
-                        <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
-                    </a>
-                </td>
-                <td class="approve text-center">
-                    <form action="" method="POST">
-                        <input type="hidden" name="approve">
-                        <button type="button" class="btn btn-success">Approve</button>
-                        <input type="hidden" name="denied">
-                        <button type="button" class="btn btn-danger">Deny</button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-bibliography">
-                    <a href="#" class="fw-bold">
-                        Fresh-marketable tomato yields enhanced by moderate weed control and suppressed fruit dehiscence with woodchip mulching
-                    </a>
-                    <p class="col-bibliography-sub">
-                        Horimoto, Sakae; Fukuda, Kazuaki; Yoshimura, Jin; Ishida, Atsushi (2022)
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Master Thesis
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Sriwijaya University, Faculty of Agriculture, Agribusiness
-                    </p>
-                </td>
-                <td class="text-center">
-                    <a href="#">
-                        <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
-                    </a>
-                </td>
-                <td class="approve text-center">
-                    <form action="" method="POST">
-                        <input type="hidden" name="approve">
-                        <button type="button" class="btn btn-success">Approve</button>
-                        <input type="hidden" name="denied">
-                        <button type="button" class="btn btn-danger">Deny</button>
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-bibliography">
-                    <a href="#" class="fw-bold">
-                        Fresh-marketable tomato yields enhanced by moderate weed control and suppressed fruit dehiscence with woodchip mulching
-                    </a>
-                    <p class="col-bibliography-sub">
-                        Horimoto, Sakae; Fukuda, Kazuaki; Yoshimura, Jin; Ishida, Atsushi (2022)
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Master Thesis
-                    </p>
-                    <p class="col-bibliography-sub">
-                        Sriwijaya University, Faculty of Agriculture, Agribusiness
-                    </p>
-                </td>
-                <td class="text-center">
-                    <a href="#">
-                        <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
-                    </a>
-                </td>
-                <td class="approve text-center">
-                    <form action="" method="POST">
-                        <input type="hidden" name="approve">
-                        <button type="button" class="btn btn-success">Approve</button>
-                        <input type="hidden" name="denied">
-                        <button type="button" class="btn btn-danger">Deny</button>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    @if($documents->isEmpty())
+        <h1 class="text-center fw-bold">No document awaiting approval</h1>
+    @else
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="col" class="fw-bold">Bibliography</th>
+                    <th scope="col" class="fw-bold">Content</th>
+                    <th scope="col" class="fw-bold">Approvement</th>
+                </tr>
+                @foreach ($documents as $document)
+                    <tr>
+                        <td class="col-bibliography">
+                            <a href="#" class="fw-bold">
+                                {{ $document->title }}
+                            </a>
+                            <p class="col-bibliography-sub">
+                                @foreach ($document->author as $author)
+                                    @php
+                                        $nameArr = explode(" ", $author->name);
+                                        $authorName = $nameArr[count($nameArr) - 1] . ", " . implode(" ", array_slice($nameArr, 0, count($nameArr) - 1));  
+                                    @endphp
+
+                                    {{ $authorName }};
+                                @endforeach
+                            </p>
+                            <p class="col-bibliography-sub">
+                                {{ $document->resolveItemType() }}
+                            </p>
+                            <p class="col-bibliography-sub">
+                                Sriwijaya University, {{ $document->resolveFaculty() }}
+                            </p>
+                        </td>
+                        <td class="text-center">
+                            <a href="{{ route('pending', ['filename' => $document->filename]) }}">
+                                <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
+                            </a>
+                        </td>
+
+                        <td class="approve text-center">
+                            <form action="" method="POST">
+                                <input type="hidden" name="accept">
+                                <button type="button" class="btn p-0 me-4">
+                                    <i class="fa-solid fa-square-check fs-1" style="color: limegreen;"></i>
+                                </button>
+                                <input type="hidden" name="reject">
+                                <button type="button" class="btn p-0">
+                                    <i class="fa-solid fa-square-xmark fs-1" style="color: #ff0000;"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
 </div>
 @endsection
