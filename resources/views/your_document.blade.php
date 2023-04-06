@@ -31,9 +31,16 @@
                 @foreach ($documents as $document)
                     <tr>
                         <td class="col-bibliography">
-                            <a href="#" class="fw-bold">
-                                {{ $document->title }}
-                            </a>
+                            @if ($document->status === 'Pending' || $document->status === 'Accepted')
+                                <a href="#" class="fw-bold">
+                                    {{ $document->title }}
+                                </a>
+                            @else
+                                <p class="fw-bold m-0 text-danger">
+                                    {{ $document->title }}
+                                </p>
+                            @endif
+
                             <p class="col-bibliography-sub">
                                 @foreach ($document->author as $author)
                                     @php
@@ -52,9 +59,17 @@
                             </p>
                         </td>
                         <td class="text-center">
-                            <a href="{{ route('pending', ['filename' => $document->filename]) }}">
-                                <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
-                            </a>
+                            @if ($document->status === 'Pending')
+                                <a href="{{ route('pending', ['filename' => $document->filename]) }}">
+                                    <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
+                                </a>
+                            @elseif ($document->status === 'Accepted')
+                                <a href="{{ route('accepted', ['filename' => $document->filename]) }}">
+                                    <i class="fa-regular fa-file-pdf" style="font-size: 60px"></i>
+                                </a>
+                            @else
+                                <i class="fa-regular fa-file-pdf text-danger" style="font-size: 60px"></i>
+                            @endif
                         </td>
                         <td class="approve text-center">
                             {{ $document->status }}

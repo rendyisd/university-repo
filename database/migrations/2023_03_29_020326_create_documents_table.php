@@ -22,7 +22,7 @@ return new class extends Migration
             $table->enum('item_type', ['ug', 'ms', 'phd']);
             $table->date('published_date')->nullable()->format('Y-m-d');
             $table->string('filename', 255);
-            $table->enum('status', ['Pending', 'Accepted'])->default('Pending');
+            $table->enum('status', ['Pending', 'Accepted', 'Rejected'])->default('Pending');
             $table->timestamps();
         });
     }
