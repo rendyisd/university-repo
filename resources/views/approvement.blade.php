@@ -48,6 +48,9 @@
                             <p class="col-bibliography-sub">
                                 Sriwijaya University, {{ $document->resolveFaculty() }}
                             </p>
+                            <p class="col-bibliography-sub">
+                                Depositted by user: <span class="fw-bold">{{ $document->user->name }}</span>
+                            </p>
                         </td>
                         <td class="text-center">
                             <a href="{{ route('pending', ['filename' => $document->filename]) }}">
@@ -56,13 +59,14 @@
                         </td>
 
                         <td class="approve text-center">
-                            <form action="" method="POST">
-                                <input type="hidden" name="accept">
-                                <button type="button" class="btn p-0 me-4">
+                            <form action="{{ route('approveDecision') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="doc_id" value="{{ $document->id }}">
+
+                                <button type="submit" class="btn p-0 me-4" name="decision" value="accept">
                                     <i class="fa-solid fa-square-check fs-1" style="color: limegreen;"></i>
                                 </button>
-                                <input type="hidden" name="reject">
-                                <button type="button" class="btn p-0">
+                                <button type="submit" class="btn p-0" name="decision" value="reject">
                                     <i class="fa-solid fa-square-xmark fs-1" style="color: #ff0000;"></i>
                                 </button>
                             </form>
@@ -74,3 +78,7 @@
     @endif
 </div>
 @endsection
+
+<script>
+
+</script>

@@ -16,12 +16,18 @@ class Document extends Model
         'abstract',
         'item_type',
         'filename',
+        'published_date',
         'status',
     ];
 
     public function author()
     {
         return $this->belongsToMany(Author::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 
     public function resolveFaculty()

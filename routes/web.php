@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\DocumentController;
-use App\Models\Document;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,6 +27,10 @@ Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, '
     ->middleware('role:Admin')
     ->name('approvement');
 
+Route::post('/approvement/decision', [App\Http\Controllers\DocumentController::class, 'approveDecision'])
+    ->middleware('role:Admin')
+    ->name('approveDecision');
+
 Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])
     ->middleware('auth')
     ->name('deposit');
@@ -43,3 +45,6 @@ Route::get('/your-document', [App\Http\Controllers\YourDocumentController::class
 Route::get('/docs/pending/{filename}', [App\http\Controllers\DocumentController::class, 'pending'])
     ->middleware('pending')
     ->name('pending');
+
+Route::get('/docs/accepted/{filename}', [App\http\Controllers\DocumentController::class, 'accepted'])
+    ->name('accepted');

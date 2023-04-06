@@ -69,13 +69,15 @@ class DepositController extends Controller
         ]);
         $newDoc->author()->attach($mainAuthor->id, ['status' => 'Main']);
 
-        foreach($validatedData['contAuthor'] as $name){
-            $contAuthor = Author::firstOrCreate([
-                'name' => $name
-            ]);
-            $newDoc->author()->attach($contAuthor->id, ['status' => 'Contributor']);
+        if(!empty($validatedData['contAuthor'])){
+            foreach($validatedData['contAuthor'] as $name){
+                $contAuthor = Author::firstOrCreate([
+                    'name' => $name
+                ]);
+                $newDoc->author()->attach($contAuthor->id, ['status' => 'Contributor']);
+            }
         }
-
+        
         return redirect()->route('your_document');
     }
 }
