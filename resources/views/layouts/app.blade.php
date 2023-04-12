@@ -90,6 +90,9 @@
 
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                         <a href="{{ route('your_document') }}" class="dropdown-item text-dark">Your Document</a>
+                                        @if (Auth::user()->role === 'Admin')
+                                            <a href="{{ route('approvement') }}" class="dropdown-item text-dark">Approvement Page</a>
+                                        @endif
                                         <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
