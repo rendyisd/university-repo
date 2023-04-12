@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
+use App\Models\Document;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $documents = Document::where('status', '=', 'Accepted')->get();
+        $authors = Author::withCount(['documents' => function($query) {
+                                        $query->where('documents.status', '=', 'Accepted');
+                                    }])
+                            ->orderByDesc('documents_count')
+                            ->get();
+
+        return view('home', ['documents' => $documents, 'authors' => $authors]);
     }
 }
