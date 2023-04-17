@@ -25,8 +25,13 @@ Route::get('/metadata/pending', [App\Http\Controllers\MetadataController::class,
     ->name('metadata.pending');
 
 Route::get('/browse/faculty', [App\Http\Controllers\SearchController::class, 'facultyView'])->name('browse.faculty');
+Route::get('/browse/faculty/{faculty}', [App\Http\Controllers\SearchController::class, 'facultyBrowse'])->name('browse.faculty.get');
+
 Route::get('/browse/year', [App\Http\Controllers\SearchController::class, 'yearView'])->name('browse.year');
+Route::get('/browse/year/{year}', [App\Http\Controllers\SearchController::class, 'yearBrowse'])->name('browse.year.get');
+
 Route::get('/browse/type', [App\Http\Controllers\SearchController::class, 'typeView'])->name('browse.type');
+Route::get('/browse/type/{type}', [App\Http\Controllers\SearchController::class, 'typeBrowse'])->name('browse.type.get');
 
 Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, 'index'])
     ->middleware('role:Admin')
@@ -39,6 +44,7 @@ Route::post('/approvement/decision', [App\Http\Controllers\DocumentController::c
 Route::get('/deposit', [App\Http\Controllers\DepositController::class, 'index'])
     ->middleware('auth')
     ->name('deposit');
+
 Route::post('/deposit/submit', [App\Http\Controllers\DepositController::class, 'depositSubmit'])
     ->middleware('auth')
     ->name('depositSubmit');

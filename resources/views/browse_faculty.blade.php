@@ -14,34 +14,34 @@
     </div>
     <p>Please select these options below</p>
     <ul class="m-0">
-        <li><a href="">Faculty of Economics</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'feco']) }}">Faculty of Economics</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Law</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'flaw']) }}">Faculty of Law</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Engineering</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'feng']) }}">Faculty of Engineering</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Medicine</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'fmed']) }}">Faculty of Medicine</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Argiculture</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'fagr']) }}">Faculty of Argiculture</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Education and Educational Science</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'fedu']) }}">Faculty of Education and Educational Science</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Social and Politic Science</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'fsoc']) }}">Faculty of Social and Politic Science</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Mathematics and Natural Science</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'fmat']) }}">Faculty of Mathematics and Natural Science</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Computer Science</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'focs']) }}">Faculty of Computer Science</a></li>
     </ul>
     <ul class="m-0">
-        <li><a href="">Faculty of Public Health</a></li>
+        <li><a href="{{ route('browse.faculty.get', ['faculty' => 'foph']) }}">Faculty of Public Health</a></li>
     </ul>
 </div>
 @endsection
