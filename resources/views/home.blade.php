@@ -15,54 +15,53 @@
             <div class="row mb-3">
                 <div class="title-text pb-2 mb-4">
                     <i class="fa-solid fa-magnifying-glass me-2"></i>
-                    <span class="fw-bold">Searching</span>
+                    <span class="fw-bold">Search Document by</span>
                 </div>
     
                 {{-- Search form --}}
-                <form action="" method="get">
+                <form action="{{ route('home.search') }}" method="get">
                     <div class="row mb-4">
                         <div class="col">
                         
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected disabled>Select search by</option>
-                                <option value="searchTitle">Title</option>
-                                <option value="searchAuthor">Author</option>
+                            <select class="form-select" name="type" required>
+                                <option value="title" selected>Title</option>
+                                <option value="author">Author</option>
                             </select>
 
                         </div>
                         <div class="col search-box-container">
-                            <input type="text" class="form-control" id="searchForm">
+                            <input type="text" class="form-control" id="searchForm" name="q" required>
                             <i class="fa-solid fa-magnifying-glass me-2 search-icon"></i>
                         </div>
                     </div>
+                </form>
 
-                    <div class="row">
-                        <div class="col">
+                <div class="row">
+                    <div class="col">
 
-                            <div class="card mb-4 w-100 panel-browse">
-                                <div class="card-header text-center">
-                                    Browse
-                                </div>
-                                <div class="card-body d-grid gap-2">
-                                    <div class="row">
-                                        <div class="col px-1">
-                                            <a href="{{ route('browse.faculty') }}" class="btn btn-secondary w-100">Faculty</a>
-                                        </div>
-                                        <div class="col px-1">
-                                            <a href="{{ route('browse.year') }}" class="btn btn-secondary w-100">Year</a>
-                                        </div>
+                        <div class="card mb-4 w-100 panel-browse">
+                            <div class="card-header text-center">
+                                Browse
+                            </div>
+                            <div class="card-body d-grid gap-2">
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <a href="{{ route('browse.faculty') }}" class="btn btn-secondary w-100">Faculty</a>
                                     </div>
-                                    <div class="row">
-                                        <div class="col px-1">
-                                            <a href="{{ route('browse.type') }}" class="btn btn-secondary w-100">Document Type</a>
-                                        </div>
+                                    <div class="col px-1">
+                                        <a href="{{ route('browse.year') }}" class="btn btn-secondary w-100">Year</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-1">
+                                        <a href="{{ route('browse.type') }}" class="btn btn-secondary w-100">Document Type</a>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
-                </form>
+                </div>
             </div>
 
             <div class="row">
@@ -138,7 +137,7 @@
                 <ul class="list-group list-group-flush">
                     @foreach ($authors->take(10) as $author)
                         <li class="list-group-item">
-                            <a href="#">
+                            <a href="{{ route('home.search', ['type' => 'author', 'q' => $author->name]) }}">
                                 {{ $author->name }}
                             </a>
                             <span class="badge">{{ $author->documents_count }}</span>

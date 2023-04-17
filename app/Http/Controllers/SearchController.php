@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
 use App\Models\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -85,5 +86,34 @@ class SearchController extends Controller
                                 ->get();
 
         return view('browse', ['documents' => $documents, 'browseTitle' => $year]);
+    }
+
+    public function homeSearch(Request $request)
+    {
+        $searchType = $request->get('type');
+        $searchQuery = $request->get('q');
+
+        $browseTitle = "Unknown query";
+
+        if($searchType === 'title'){
+            $documents = Document::where('status', '=', 'Accepted')
+                                    ->where('title', 'like', '%'.$searchQuery.'%')->get();
+            
+            $browseTitle = 'Showing documents with the title "' . $searchQuery . '"';
+
+        }
+        elseif($searchType === 'author'){
+            $authors = Author::where('name', 'like', '%'.$searchQuery.'%')->get();
+
+            $documents = collect();
+
+            foreach($authors as $author){
+                $documents = $documents->merge($author->documentsAccepted()->get());
+            }
+
+            $browseTitle = 'Showing documents from author "' . $searchQuery . '"';
+        }
+        
+        return view('browse', ['documents' => $documents, 'browseTitle' => $browseTitle]);
     }
 }

@@ -165,7 +165,7 @@
                     <ul class="list-group list-group-flush">
                         @foreach ($authors->take(10) as $author)
                             <li class="list-group-item">
-                                <a href="#">
+                                <a href="{{ route('home.search', ['type' => 'author', 'q' => $author->name]) }}">
                                     {{ $author->name }}
                                 </a>
                                 <span class="badge">{{ $author->documents_count }}</span>

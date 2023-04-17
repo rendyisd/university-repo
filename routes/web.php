@@ -24,6 +24,8 @@ Route::get('/metadata/pending', [App\Http\Controllers\MetadataController::class,
     ->middleware('pending')
     ->name('metadata.pending');
 
+Route::get('/search', [App\Http\Controllers\SearchController::class, 'homeSearch'])->name('home.search');
+
 Route::get('/browse/faculty', [App\Http\Controllers\SearchController::class, 'facultyView'])->name('browse.faculty');
 Route::get('/browse/faculty/{faculty}', [App\Http\Controllers\SearchController::class, 'facultyBrowse'])->name('browse.faculty.get');
 
