@@ -29,7 +29,7 @@
                 @foreach ($documents as $document)
                     <tr>
                         <td class="col-bibliography">
-                            <a href="#" class="fw-bold">
+                            <a href="{{ route('metadata.pending', ['id' => $document->id]) }}" class="fw-bold">
                                 {{ $document->title }}
                             </a>
                             <p class="col-bibliography-sub">
