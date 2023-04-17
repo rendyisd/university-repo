@@ -31,8 +31,12 @@
                 @foreach ($documents as $document)
                     <tr>
                         <td class="col-bibliography">
-                            @if ($document->status === 'Pending' || $document->status === 'Accepted')
-                                <a href="#" class="fw-bold">
+                            @if ($document->status === 'Pending')
+                                <a href="{{ route('metadata.pending', ['id' => $document->id]) }}" class="fw-bold">
+                                    {{ $document->title }}
+                                </a>
+                            @elseif ($document->status === 'Accepted')
+                                <a href="{{ route('metadata.accepted', ['id' => $document->id]) }}" class="fw-bold">
                                     {{ $document->title }}
                                 </a>
                             @else

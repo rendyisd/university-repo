@@ -15,17 +15,17 @@
     <p>Please select these options below</p>
     <ul class="m-0">
         <li>
-            <a href="">Undergraduate Thesis</a>
+            <a href="{{ route('browse.type.get', ['type' => 'ug']) }}">Undergraduate Thesis</a>
         </li>
     </ul>
     <ul class="m-0">
         <li>
-            <a href="">Master Thesis</a>
+            <a href="{{ route('browse.type.get', ['type' => 'ms']) }}">Master Thesis</a>
         </li>
     </ul>
     <ul class="m-0">
         <li>
-            <a href="">Doctoral Dissertation</a>
+            <a href="{{ route('browse.type.get', ['type' => 'phd']) }}">Doctoral Dissertation</a>
         </li>
     </ul>
 </div>

@@ -14,11 +14,17 @@
     </div>
     <p>Please select these options below</p>
 
-    <ul class="m-0">
-        <li>
-            <a href="">2023</a>
-        </li>
-    </ul>
-
+    @if (empty($years))
+        <h2 class="fw-bold">No document published yet.</h2>
+    
+    @else
+        <ul class="m-0">
+            @foreach ($years as $year)
+                <li>
+                    <a href="{{ route('browse.year.get', ['year' => $year]) }}">{{ $year }}</a>
+                </li>
+            @endforeach
+        </ul>
+    @endif
 </div>
 @endsection
