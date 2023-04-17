@@ -59,8 +59,8 @@
                                 </a>
                             </li>
                             <li class="nav-item my-auto me-2">
-                                <a href="{{ url('/') }}" class="nav-link">
-                                    {{ __('About Us') }}
+                                <a href="{{ route('deposit') }}" class="nav-link">
+                                    {{ __('Deposit') }}
                                 </a>
                             </li>
                             

@@ -8,12 +8,17 @@
 
 @section('content')
 <div class="container">
-    <table>
-        <p><a href="">2023</a></p>
-        <p><a href="">2022</a></p>
-        <p><a href="">2021</a></p>
-        <p><a href="">2020</a></p>
-        <p><a href="">2019</a></p>
-    </table>
+    <div class="title-text pb-2 mb-4 fs-4">
+        <i class="fa-solid fa-book me-2"></i>
+        <span class="fw-bold">Browse by Year</span>
+    </div>
+    <p>Please select these options below</p>
+
+    <ul class="m-0">
+        <li>
+            <a href="">2023</a>
+        </li>
+    </ul>
+
 </div>
 @endsection

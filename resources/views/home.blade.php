@@ -11,12 +11,6 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-9">
-            <a href="{{ route('metadata') }}" class="btn btn-primary">Metadata</a>
-            <a href="{{ route('browse') }}" class="btn btn-primary">Browse</a>
-            <a href="{{ route('approvement') }}" class="btn btn-primary">Approvement</a>
-            <a href="{{ route('deposit') }}" class="btn btn-primary">Deposit</a>
-            <a href="{{ route('your_document') }}" class="btn btn-primary">Your Document</a>
-            <br>
             {{-- Kolom kiri --}}
             <div class="row mb-3">
                 <div class="title-text pb-2 mb-4">
@@ -52,15 +46,15 @@
                                 <div class="card-body d-grid gap-2">
                                     <div class="row">
                                         <div class="col px-1">
-                                            <a href="" class="btn btn-secondary w-100">Faculty</a>
+                                            <a href="{{ route('browse.faculty') }}" class="btn btn-secondary w-100">Faculty</a>
                                         </div>
                                         <div class="col px-1">
-                                            <a href="" class="btn btn-secondary w-100">Year</a>
+                                            <a href="{{ route('browse.year') }}" class="btn btn-secondary w-100">Year</a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col px-1">
-                                            <a href="" class="btn btn-secondary w-100">Document Type</a>
+                                            <a href="{{ route('browse.type') }}" class="btn btn-secondary w-100">Document Type</a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +80,7 @@
                         @foreach ($documents as $document)
                             <tr>
                                 <td class="col-bibliography">
-                                    <a href="#" class="fw-bold">
+                                    <a href="{{ route('metadata.accepted', ['id' => $document->id]) }}" class="fw-bold">
                                         {{ $document->title }}
                                     </a>
                                     <p class="col-bibliography-sub">
@@ -120,14 +114,14 @@
         </div>
 
         <div class="col-lg-3">
-            <div class="card mb-4 w-100 panel-submission">
+            <div class="card w-100 panel-submission">
                 <div class="card-header text-center">
                     Recent Submissions
                 </div>
                 <ul class="list-group list-group-flush">
                     @foreach ($documents->take(5) as $document)
                         <li class="list-group-item">
-                            <a href="#">
+                            <a href="{{ route('metadata.accepted', ['id' => $document->id]) }}">
                                 {{ $document->title }}
                             </a>
                         </li>
@@ -135,12 +129,14 @@
                 </ul>
             </div>
 
+            <a href="{{ route('deposit') }}" class="btn btn-primary my-3 w-100">Deposit Your Document Here</a>
+
             <div class="card mb-4 w-100 panel-shortcut-author">
                 <div class="card-header">
                     Author
                 </div>
                 <ul class="list-group list-group-flush">
-                    @foreach ($authors->take(5) as $author)
+                    @foreach ($authors->take(10) as $author)
                         <li class="list-group-item">
                             <a href="#">
                                 {{ $author->name }}

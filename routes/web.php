@@ -19,9 +19,14 @@ Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // These are temporary
-Route::get('/metadata', [App\Http\Controllers\MetadataController::class, 'index'])->name('metadata');
+Route::get('/metadata/accepted', [App\Http\Controllers\MetadataController::class, 'index'])->name('metadata.accepted');
+Route::get('/metadata/pending', [App\Http\Controllers\MetadataController::class, 'index'])
+    ->middleware('pending')
+    ->name('metadata.pending');
 
-Route::get('/browse', [App\Http\Controllers\BrowseController::class, 'index'])->name('browse');
+Route::get('/browse/faculty', [App\Http\Controllers\SearchController::class, 'facultyView'])->name('browse.faculty');
+Route::get('/browse/year', [App\Http\Controllers\SearchController::class, 'yearView'])->name('browse.year');
+Route::get('/browse/type', [App\Http\Controllers\SearchController::class, 'typeView'])->name('browse.type');
 
 Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, 'index'])
     ->middleware('role:Admin')
