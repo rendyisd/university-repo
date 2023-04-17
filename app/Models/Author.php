@@ -17,4 +17,10 @@ class Author extends Model
     {
         return $this->belongsToMany(Document::class);
     }
+
+    public function documentsAccepted()
+    {
+        return $this->belongsToMany(Document::class)
+                    ->where('documents.status', '=', 'Accepted');
+    }
 }
