@@ -35,6 +35,19 @@ Route::get('/browse/year/{year}', [App\Http\Controllers\SearchController::class,
 Route::get('/browse/type', [App\Http\Controllers\SearchController::class, 'typeView'])->name('browse.type');
 Route::get('/browse/type/{type}', [App\Http\Controllers\SearchController::class, 'typeBrowse'])->name('browse.type.get');
 
+Route::get('/doc-control', [\App\Http\Controllers\DocumentController::class, 'documentControlView'])
+    ->middleware('role:Admin')
+    ->name('docControl');
+Route::delete('/doc-control/delete', [\App\Http\Controllers\DocumentController::class, 'deleteDocument'])
+    ->middleware('role:Admin')
+    ->name('docControl.delete');
+Route::get('/doc-control/edit', [\App\Http\Controllers\DocumentController::class, 'editView'])
+    ->middleware('role:Admin')
+    ->name('edit');
+Route::post('/doc-control/edit/submit', [\App\Http\Controllers\DocumentController::class, 'editSubmit'])
+    ->middleware('role:Admin')
+    ->name('docControl.edit');
+
 Route::get('/approvement', [App\Http\Controllers\ApprovementController::class, 'index'])
     ->middleware('role:Admin')
     ->name('approvement');
