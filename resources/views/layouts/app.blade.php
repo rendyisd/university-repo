@@ -92,6 +92,7 @@
                                         <a href="{{ route('your_document') }}" class="dropdown-item text-dark">Your Document</a>
                                         @if (Auth::user()->role === 'Admin')
                                             <a href="{{ route('approvement') }}" class="dropdown-item text-dark">Approvement Page</a>
+                                            <a href="{{ route('docControl') }}" class="dropdown-item text-dark">Document Control</a>
                                         @endif
                                         <a class="dropdown-item text-dark" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
