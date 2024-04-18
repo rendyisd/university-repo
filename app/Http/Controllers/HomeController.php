@@ -31,7 +31,6 @@ class HomeController extends Controller
                                     }])
                             ->orderByDesc('documents_count')
                             ->get();
-
         return view('home', ['documents' => $documents, 'authors' => $authors]);
     }
 }

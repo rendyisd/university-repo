@@ -7,9 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Sriwijaya University Digital Repository</title>
-
-    <link rel="icon" href="{{ asset('/images/unsri.png') }}">
+    <title>BSB Approval Document</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -29,17 +27,14 @@
             <div class="navbar bg-light">
                 <div class="container logo-container">
                     <a class="navbar-brand d-flex flex-wrap align-items-center" href="{{ url('/') }}">
-                        <img src="{{ asset('images/unsri.png') }}" class="logo">
-                        <h3 class="logo-text ms-3">
-                            {{ __('Digital Repository') }}
-                        </h3>
+                        <img src="{{ asset('images/bsblogo.png') }}" class="logo">
                     </a>
                 </div>
             </div>
             <nav class="navbar navbar-expand-md navbar-dark bg-light-dark shadow-sm custom-navbar">
                 <div class="container">
                     <p class="my-auto">
-                        {{ __('Research Information Repository') }}
+                        {{ __('Human Capital Archive System') }}
                     </p>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>

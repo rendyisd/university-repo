@@ -18,8 +18,8 @@
         <table class="table table-striped table-bordered">
             <tbody>
                 <tr>
-                    <th scope="col" class="fw-bold">Bibliography</th>
-                    <th scope="col" class="fw-bold">Content</th>
+                    <th scope="col" class="fw-bold">Relevant searches </th>
+                    <th scope="col" class="fw-bold">Document</th>
                 </tr>
                 @foreach ($documents as $document)
                     <tr>
